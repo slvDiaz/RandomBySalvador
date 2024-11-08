@@ -2,7 +2,7 @@ function optionsRdb() {
 	var orden = document.getElementById('orden');
 	var random = document.getElementById('random');
 	if (orden.checked) {
-		location.href = "https://www.youtube.com/watch?v=D-3jesGZLd4";
+		location.href = "ordenQuestion.html";
 	}
 	if (random.checked) {
 		location.href = "https://www.youtube.com/watch?v=7h2ryr_uUEs";
