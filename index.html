@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random Question</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="options.js"></script>
+</head>
+<body>
+	<div class="whOne flex" id="divPrin">
+		<div class="flex" id="divSub">
+			<div style="text-align: center;">
+				<h2>Hola, Dani!</h2>
+				<h1>¿Cómo prefieres el orden de las preguntas?</h1>
+			</div>
+			<input type="radio" id="orden" name="options" value="orden" onclick="changeColor(1)">
+			<input type="radio" id="random" name="options" value="random" onclick="changeColor(2)"> 
+			<label id="lblOrden" for="orden" class="divOptions flex">
+				<h4>En orden</h4>
+				<h5>No se repiten las preguntas</h5>
+			</label>
+			<label id="lblRandom" for="random" class="divOptions flex">
+				<h4>Aleatorias</h4>
+				<h5>Puede que se repitan las preguntas</h5>
+			</label>
+			<label class="flex" id="sendOpt" onclick="optionsRdb()">Continuar</label>
+		</div>
+	</div>
+</body>
+</html>
