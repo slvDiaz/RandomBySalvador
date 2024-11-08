@@ -1,0 +1,37 @@
+progress {
+	position: absolute;
+	top: 25%;
+	-webkit-appearance: none;
+	width: 80%;
+}
+img{
+	position: absolute;
+	bottom: 75%;
+	width: 40%;
+}
+input{
+	outline: none;
+	border: none;
+	width: 80%;
+	height: 35px;
+	border-radius: 20px;
+	text-align: center;
+}
+h1{
+
+}
+::-webkit-progress-bar {
+	background-color: #fbe9db;
+}
+::-webkit-progress-value {
+	background-color: #b28c6e;
+}
+.lblQuestion{
+	width: 100%;
+	height: 20%;
+	flex-direction: column;
+	transition: 500ms ease;
+}
+#textQuestion{
+	text-align: center;
+}
