@@ -1,4 +1,4 @@
 function validateAnswer() {
-var answerUser = document.getElementById('inpAnswer');
+var answerUser = document.getElementById('inpAnswer').textContent;
 alert(answerUser);
 }
