@@ -30,7 +30,7 @@ const questions = [
     "Proteínas que circulan en estado inerte; para activarse necesitan un cambio bioquímico en su estructura que lo lleve a conformar un centro activo donde pueda realizar catálisis. También denominadas Serinproteasas porque en su centro activo tienen serina. (Ej. Factor II, VII, IX, X, XI, XII y precalicreina",
     "Componente necesario para que una enzima pueda actuar sobre su sustrato. (Ej. Factor V, CAMP, (quininógeno de alto peso molecular, etc.)",
     "Las plaquetas provienen de la fragmentación del __, célula que se localiza en la __ ___ capaz de producir hasta 5mil plaquetas",
-    "Trombopoyesis: ➡️__➡️___➡️___⤵️__",
+    "Trombopoyesis: ___➡️___➡️___➡️___⤵️___",
     "Las plaquetas viven en promedio __ días.",
     "No tienen núcleo, tienen ___ y ___",
     "Las células endoteliales producen sustancias: ___ : Activan el proceso. __: Inhiben al Ca++",
@@ -82,7 +82,7 @@ const answers = [
     "zimogenos",
     "cofactores",
     "megacariocito, medula osea",
-    "megacarioblasto, promegacariocito, megacariocito grandular, megacariocito liberador de plaquetas, plaquetas",
+    "megacarioblasto, promegacariocito, megacariocito granular, megacariocito liberador de plaquetas, plaquetas",
     "9-12",
     "mitocondrias y granulos",
     "procoagulantes y anticoagulantes",
@@ -106,7 +106,8 @@ const answers = [
 ];
 function eraseAnswer() {
     document.getElementById('inputAnswer').value = "";
-    alert("Respuesta incorrecta");
+    var divError = document.getElementById('divError');
+    divError.style.display = 'flex';
 }
 function updateQuestion() {
     const textQuestion = document.getElementById('textQuestion');
@@ -123,7 +124,6 @@ function sendAnswer() {
     const numQuestion = document.getElementById('numQuestion').textContent;
     
     if(answerUser === answers[index].toLowerCase()){ // Compara la respuesta del usuario con la respuesta correcta
-        alert("Respuesta correcta");
         document.getElementById('inputAnswer').value = "";
         index++; // Avanza al siguiente índice de la pregunta
         if (index < questions.length) { // Si hay más preguntas
@@ -135,4 +135,8 @@ function sendAnswer() {
     } else {
         eraseAnswer(); // Si la respuesta es incorrecta, borra el campo y muestra el mensaje
     }
+}
+function hiddenError() {
+    var divError = document.getElementById('divError');
+    divError.style.display = 'none';
 }

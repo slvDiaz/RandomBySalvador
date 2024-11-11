@@ -11,14 +11,20 @@
 <body>
 	<div class="whOne flex" id="divPrin">
 		<div class="flex" id="divSub">
-			<img src="1.png">
-			<br><br><br><br><br><h1 id="numQuestion">Pregunta No 1</h1>
-			<progress value="1" max="50"></progress>
+			<progress id="progressBar" value="1" max="50"></progress>
+			<img src="1.png" id="imgOne">
+			<br><br><br><br><br><br><img src="heart.gif" id="imgTwo"><br>
+			<h1 id="numQuestion">Pregunta No 1</h1><br>
 			<p id="textQuestion">Son células sanguíneas fundamentales para la hemostasia y son las principales implicadas en alteraciones como la trombosis, trastornos hemorrágicos y en eventos trombóticos hereditarios o adquiridos.</p>
 			<label class="lblQuestion flex">
 				<input type="text" name="" id="inputAnswer">
 			</label>
 			<label class="flex" id="sendAnswer" onclick="sendAnswer()">Enviar</label>
+		</div>
+		<div class="flex" id="divError">
+			<label onclick="hiddenError()" id="callHiddenError" class="flex">x</label>
+			<img src="error.png" id="imgError">
+			<p id="msjError">Pinkie dice:<br>Respuesta no correcta</p>
 		</div>
 	</div>
 </body>
