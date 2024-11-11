@@ -2,12 +2,15 @@ progress {
 	position: absolute;
 	top: 25%;
 	-webkit-appearance: none;
-	width: 80%;
+	width: 55%;
 }
-img{
+#imgOne{
 	position: absolute;
 	bottom: 75%;
-	width: 40%;
+	width: 33%;
+}
+#imgTwo{
+	width: 20%;
 }
 input{
 	outline: none;
@@ -16,6 +19,7 @@ input{
 	height: 35px;
 	border-radius: 20px;
 	text-align: center;
+	padding: 15px;
 }
 h1{
 
@@ -34,6 +38,8 @@ h1{
 }
 #textQuestion{
 	text-align: center;
+	height: 25%;
+	overflow: scroll;
 }
 #sendAnswer{
 	width: 50%;
@@ -41,4 +47,36 @@ h1{
 	background-color: #479276;
 	border-radius: 30px;
 	color: #fff;
+}
+#divError{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(8px);
+	display: none;
+	transition: 500ms ease;
+}
+#imgError{
+	position: static;
+	width: 100%;
+	margin-bottom: 10%;
+}
+#msjError{
+	text-align: center;
+	position: absolute;
+	font-size: 20px;
+	width: 40%;
+	height: 20%;
+	font-weight: 400;
+	margin-top: 68%;
+}
+#callHiddenError{
+	position: absolute;
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	font-weight: 400;
+	font-size: 30px;
+	top: 15%;
 }
